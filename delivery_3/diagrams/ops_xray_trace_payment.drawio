@@ -1,0 +1,256 @@
+<mxfile host="Electron" modified="2026-11-27T03:12:36.958Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" version="24.2.5" etag="jhcLw2Y7TC0UCrHtUFHJ" type="device">
+  <diagram name="xray-trace-payment" id="xray-trace-payment">
+    <mxGraphModel dx="2228" dy="1312" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;AWS Cloud — Region us-east-1 — End-to-End X-Ray Trace of a Payment (UC-01), one trace_id / correlation_id&lt;/font&gt;" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;verticalAlign=top;align=left;spacingLeft=30;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#666666;fillColor=#FFFFFF;fontColor=#232F3E;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="2160" height="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="xrayhdrt" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;AWS X-Ray + ADOT collector sidecar — W3C traceparent injected at the Edge Gateway, propagated on every hop (S-01…S-19) and carried as Kafka headers on events (A-01…A-10)&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;align=left;verticalAlign=middle;fontColor=#232F3E;" parent="1" vertex="1">
+          <mxGeometry x="120" y="94" width="1790" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="syncband" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Synchronous span — payment authorization critical path (ADR-3): P95 budget ≈ 220 ms &amp;lt; 500 ms (NFR-05)&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=2;fillColor=#F2F3F5;strokeColor=#888888;fontColor=#232F3E;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="152" width="2100" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="buyer" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.users;fillColor=#232F3E;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="100" y="252" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cfwaf" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;CloudFront + AWS WAF&lt;br&gt;TLS 1.3 at the edge&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;fillColor=#8C4FFF;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="245" y="255" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="alb" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;alb-public&lt;br&gt;(3 AZs)&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fillColor=#8C4FFF;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="400" y="255" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="edge" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="560" y="255" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Authentication&lt;br&gt;Service&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="560" y="392" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="orch" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="760" y="255" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="HX7EOB6nAkkuNN-3Leli-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.217;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fraud" target="elog">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="414" />
+              <mxPoint x="880" y="490" />
+              <mxPoint x="526" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fraud" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Fraud Scoring&lt;br&gt;Service&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="930" y="392" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="store" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;DS-02 Payments + outbox&lt;br&gt;DS-03 Idempotency&lt;br&gt;commit (quorum, 3 AZs)&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=8;fontColor=#232F3E;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="930" y="252" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cde" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;CDE AWS Account — VPC 10.1.0.0/20 (PCI-DSS v4.0.1 isolated scope)&lt;/font&gt;" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;verticalAlign=top;align=left;spacingLeft=30;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_account;strokeColor=#DD344C;fillColor=#FFF5F5;fontColor=#DD344C;dashed=0;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="200" width="566" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="netgw" value="Network Gateway&lt;br style=&quot;font-size: 15px;&quot;&gt;ISO 8583 / 20022" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="272" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="token" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Tokenization&lt;br&gt;Service (DS-01)&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1770" y="272" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="bank" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Banking &amp;amp;&lt;br&gt;Payment Networks&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.traditional_server;fillColor=#5A6C86;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1550" y="348" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="respnote" value="Synchronous response to Buyer after the commit (step 7): authorized / pending / requires_review" style="text;html=1;whiteSpace=wrap;fontSize=15;fontStyle=2;align=left;verticalAlign=middle;fontColor=#5A6C86;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="247" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Synchronous / asynchronous boundary — the Buyer is answered here; all downstream work runs after the commit through DS-11 (ADR-2)&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;fontColor=#C9302C;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="497" width="2100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="elog" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;DS-11 Event Log (Amazon MSK Express) — outbox relay, partitioned by seller_id, at-least-once; trace_id + correlation_id in Kafka headers&lt;/font&gt;" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D79B00;fontSize=10;fontStyle=1;fontColor=#232F3E;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="70" y="542" width="2100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mskicon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.managed_streaming_for_kafka;fillColor=#E7157B;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="90" y="555" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="asyncband" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Linked asynchronous spans — idempotent consumers continue the same trace (A-01 … A-11)&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=2;fillColor=#F2F3F5;strokeColor=#888888;fontColor=#232F3E;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="642" width="2100" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="ledgerc" value="Ledger Consumer&lt;br style=&quot;font-size: 15px;&quot;&gt;(DS-04)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#3F8624;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="213" y="790" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="readc" value="Read Models&lt;br style=&quot;font-size: 15px;&quot;&gt;Projector (DS-12)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#3F8624;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="560" y="760" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="auditc" value="Audit Ingestion&lt;br style=&quot;font-size: 15px;&quot;&gt;(DS-10 WORM)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#3F8624;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="930" y="790" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dispc" value="Webhook / Notification&lt;br style=&quot;font-size: 15px;&quot;&gt;Dispatcher (DS-09)" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#3F8624;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="760" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="sqs" value="Amazon SQS&lt;br style=&quot;font-size: 15px;&quot;&gt;webhook-delivery queue" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.simple_queue_service;fillColor=#E7157B;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="940" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="seller" value="Seller&#39;s System&lt;br style=&quot;font-size: 15px;&quot;&gt;HMAC-signed webhook" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=15;aspect=fixed;shape=mxgraph.aws4.traditional_server;fillColor=#5A6C86;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1650" y="940" width="44" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="ledgerstore" value="DS-04 Ledger&lt;br style=&quot;font-size: 15px;&quot;&gt;journal_posted" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="160" y="970" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="readstore" value="DS-12 Read Model&lt;br style=&quot;font-size: 15px;&quot;&gt;(OpenSearch) lag &amp;lt; 5 s" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="497" y="970" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="auditstore" value="DS-10 Audit Store&lt;br style=&quot;font-size: 15px;&quot;&gt;(S3 WORM, hash-chained)" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;align=center;" parent="1" vertex="1">
+          <mxGeometry x="852" y="970" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;HTTPS /&amp;nbsp;&lt;/font&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;TLS 1.3&lt;/font&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="buyer" target="cfwaf" edge="1">
+          <mxGeometry x="0.002" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;to origin&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="cfwaf" target="alb" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;POST /v1/payments&lt;br&gt;edge ≈ 20 ms&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="alb" target="edge" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;S-03 ValidateToken&lt;br&gt;≈ 10 ms&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="edge" target="auth" edge="1">
+          <mxGeometry x="-0.3333" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;S-02 authorize (gRPC)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="edge" target="orch" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;S-04 ScorePayment&lt;br&gt;≤ 100 ms deadline&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="orch" target="fraud" edge="1">
+          <mxGeometry x="-0.0122" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="360" />
+              <mxPoint x="952" y="360" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;commit ≈ 30 ms&lt;br&gt;(quorum 2/3)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="orch" edge="1">
+          <mxGeometry x="0.1976" relative="1" as="geometry">
+            <mxPoint x="930" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="782" y="235" />
+              <mxPoint x="870" y="235" />
+              <mxPoint x="870" y="300" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;S-05 Authorize&lt;br&gt;PrivateLink&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#DD344C;strokeWidth=2;dashed=1;dashPattern=8 4;" parent="1" source="orch" target="netgw" edge="1">
+          <mxGeometry x="0.4714" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="220" />
+              <mxPoint x="1110" y="220" />
+              <mxPoint x="1110" y="294" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;S-06 Detokenize&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="netgw" target="token" edge="1">
+          <mxGeometry x="0.4479" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;mutual TLS&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;" parent="1" source="netgw" target="bank" edge="1">
+          <mxGeometry x="0.6318" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;response to Buyer (step 7)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;dashed=1;dashPattern=1 2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="orch" target="buyer" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="782" y="360" />
+              <mxPoint x="125" y="360" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="outbox relay → Event Log" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="store" target="elog" edge="1">
+          <mxGeometry x="-0.8343" relative="1" as="geometry">
+            <mxPoint x="1040" y="310" as="sourcePoint" />
+            <mxPoint x="760" y="543" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1043" y="500" />
+              <mxPoint x="570" y="500" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a1" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A-01 payment.*&lt;br&gt;linked span&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="ledgerc" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="610" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="330" y="710" />
+              <mxPoint x="235" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A-01 payment.*&lt;br&gt;linked span&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="readc" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="612" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="870" y="612" />
+              <mxPoint x="870" y="700" />
+              <mxPoint x="582" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A-01 payment.*&lt;br&gt;linked span&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;exitX=0.55;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="elog" target="auditc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A-01 payment.*&lt;br&gt;linked span&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="elog" target="dispc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;journal posted&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;" parent="1" source="ledgerc" target="ledgerstore" edge="1">
+          <mxGeometry x="0.4713" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="812" />
+              <mxPoint x="150" y="902" />
+              <mxPoint x="235" y="902" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;project&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;" parent="1" source="readc" target="readstore" edge="1">
+          <mxGeometry x="0.2322" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="782" />
+              <mxPoint x="480" y="880" />
+              <mxPoint x="582" y="880" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a7" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;append&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;" parent="1" source="auditc" target="auditstore" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A-11 enqueue&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;" parent="1" source="dispc" target="sqs" edge="1">
+          <mxGeometry x="0.2647" y="8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;HTTPS webhook&lt;br&gt;(HMAC SHA-256)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#3F8624;strokeWidth=1.5;dashed=1;dashPattern=8 4;" parent="1" source="sqs" target="seller" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HX7EOB6nAkkuNN-3Leli-1" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.xray;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HX7EOB6nAkkuNN-3Leli-2" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="1298" y="940" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="HX7EOB6nAkkuNN-3Leli-5" value="&lt;font color=&quot;#232f3e&quot; style=&quot;font-size: 15px;&quot;&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;Buyer client&lt;/span&gt;&lt;br style=&quot;text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;checkout&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="217" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HX7EOB6nAkkuNN-3Leli-6" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;span style=&quot;color: rgb(35, 47, 62); text-wrap: nowrap;&quot;&gt;Edge Gateway&lt;/span&gt;&lt;br style=&quot;color: rgb(35, 47, 62); text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;color: rgb(35, 47, 62); text-wrap: nowrap;&quot;&gt;starts trace&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="555" y="222" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HX7EOB6nAkkuNN-3Leli-7" value="&lt;span style=&quot;color: rgb(35, 47, 62); font-size: 15px; text-wrap: nowrap;&quot;&gt;Payment&lt;/span&gt;&lt;br style=&quot;color: rgb(35, 47, 62); font-size: 15px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;color: rgb(35, 47, 62); font-size: 15px; text-wrap: nowrap;&quot;&gt;Orchestrator&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="710" y="222" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

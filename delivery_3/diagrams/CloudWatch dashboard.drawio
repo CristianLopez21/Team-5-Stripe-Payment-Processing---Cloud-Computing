@@ -1,0 +1,232 @@
+<mxfile host="Electron" modified="2026-11-27T02:44:58.133Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="P0FTu-O11InhCZRhSAdo" version="24.2.5" type="device">
+  <diagram name="cloudwatch-dashboard" id="cloudwatch-dashboard">
+    <mxGraphModel dx="3183" dy="1874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;AWS Cloud — Region us-east-1 (Cross-Account CloudWatch Observability; eu-west-1 is identical)&lt;/font&gt;" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;verticalAlign=top;align=left;spacingLeft=30;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#666666;fillColor=#FFFFFF;fontColor=#232F3E;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="2120" height="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="hdrcw" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;fillColor=#E7157B;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="70" y="80" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdrcwt" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Amazon CloudWatch (DS-13) — unified metrics, dashboards, alarms, Logs and X-Ray&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;fontSize=17;fontStyle=1;align=left;verticalAlign=middle;fontColor=#232F3E;" parent="1" vertex="1">
+          <mxGeometry x="120" y="88" width="940" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="L1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Layer 1 — Executive Observability Dashboard (global SLOs / KPIs)&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=2;fillColor=#F2F3F5;strokeColor=#888888;fontColor=#232F3E;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="130" width="2060" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="k1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Global Ingress Throughput&lt;/b&gt;&lt;br&gt;&lt;i&gt;Line: req/s vs peak&lt;/i&gt;&lt;br&gt;27,394 req/s peak&lt;br&gt;&lt;b&gt;[WL-02]&lt;/b&gt;&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=9;fontColor=#232F3E;verticalAlign=middle;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="100" y="175" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="k2" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;End-to-End Payment Latency&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;i style=&quot;font-size: 15px;&quot;&gt;Line: P95 vs 500 ms line&lt;/i&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;target P95 &amp;lt; 500 ms&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;[NFR-05]&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="420" y="175" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="k3" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;30-Day Rolling Availability&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;i style=&quot;font-size: 15px;&quot;&gt;Single value + error budget&lt;/i&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;99.99% (≈4.32 min/mo)&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;[NFR-06]&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="740" y="175" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="k4" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Payment Authorization Rate&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;i style=&quot;font-size: 15px;&quot;&gt;KPI + sparkline&lt;/i&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;% approved / total&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;[Business KPI · NFR-05]&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="175" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="k5" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Cost to Date&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;i style=&quot;font-size: 15px;&quot;&gt;Single value + forecast&lt;/i&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;MTD vs budget baseline&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;[FinOps]&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="1380" y="175" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="k6" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Fleet Health / AZ map&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;i style=&quot;font-size: 15px;&quot;&gt;Status grid: 3 AZs, 2 cells&lt;/i&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;canary success by geography&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;[NFR-10]&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=middle;spacingTop=6;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="175" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="L2" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Layer 2 — Per-Service Dashboards (Four Golden Signals: Latency · Traffic · Errors · Saturation)&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=2;fillColor=#F2F3F5;strokeColor=#888888;fontColor=#232F3E;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="340" width="2060" height="730" as="geometry" />
+        </mxCell>
+        <mxCell id="pvpc" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Platform AWS Account — VPC 10.0.0.0/16 (non-CDE scope)&lt;/font&gt;" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;verticalAlign=top;align=left;spacingLeft=30;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;strokeColor=#8C4FFF;fillColor=#F9F6FF;fontColor=#8C4FFF;dashed=0;strokeWidth=1.5;" parent="1" vertex="1">
+          <mxGeometry x="90" y="375" width="1470" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="syncband" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Synchronous Services — ECS Fargate ARM64 (latency / traffic / errors / CPU)&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=4;fillColor=none;strokeColor=#ED7100;fontColor=#ED7100;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="410" width="1430" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="sicon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1510" y="410" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Edge Gateway&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 500 ms (NFR-05)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 16,437 req/s peak&lt;br style=&quot;font-size: 15px;&quot;&gt;E: 5xx &amp;lt; 0.1%; 4xx&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU · ActiveConns · req/target" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="125" y="450" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Authentication Service&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 10 ms cached (S-03)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 1,644 req/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: 5xx &amp;lt; 0.1%&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU 60%" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="415" y="450" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Payment Orchestrator&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 220 ms (S-02)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 3,780 req/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: decline vs system-error&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU · InflightPayments · DS-02 pool" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="705" y="450" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Fraud Scoring Service&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 100 ms deadline (NFR-05)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 3,205 scorings/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: fallback-rule rate&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU · step alarm at 80 ms" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="995" y="450" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Ledger Service (API)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: API P95 &amp;lt; 50 ms (S-11)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: reserve/post calls&lt;br style=&quot;font-size: 15px;&quot;&gt;E: posting failures&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU · serialization retries" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1285" y="450" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Settlement &amp;amp; Recon. (API)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 300 ms (S-17)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 200 req/s · batch 9,600 lines/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: run failures&lt;br style=&quot;font-size: 15px;&quot;&gt;S: batch backlog · CPU" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="125" y="605" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s7" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Refund &amp;amp; Dispute Service&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 300 ms (S-10)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 200 req/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: saga-step failures&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU · in-flight sagas" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="415" y="605" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s8" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Read Models &amp;amp; Query&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 300 ms (S-08)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 5,005 req/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: 5xx &amp;lt; 0.1%&lt;br style=&quot;font-size: 15px;&quot;&gt;S: projector lag &amp;lt; 5 s (ADR-5) · OpenSearch CPU" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="705" y="605" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s9" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Monitoring &amp;amp; Audit (API)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 500 ms (S-18)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 164,393 ev/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: ingestion drops&lt;br style=&quot;font-size: 15px;&quot;&gt;S: buffer depth" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="995" y="605" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s10" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Dispatcher (API)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: webhook config&lt;br style=&quot;font-size: 15px;&quot;&gt;T: endpoint mgmt&lt;br style=&quot;font-size: 15px;&quot;&gt;E: 5xx &amp;lt; 0.1%&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU 60%" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1285" y="605" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="asyncband" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Event-Driven Workers — Fargate consumers (consumer lag / queue depth / DLQ)&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=4;fillColor=none;strokeColor=#3F8624;fontColor=#3F8624;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="770" width="1430" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="aicon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#3F8624;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1510" y="770" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w1" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Ledger Consumer&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;consumer offset lag&lt;br style=&quot;font-size: 15px;&quot;&gt;54,250 ev/s · DLQ = 0 (FR-14)&lt;br style=&quot;font-size: 15px;&quot;&gt;serialization retries" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#3F8624;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="125" y="805" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="w2" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Read Models Projector&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;projection lag &amp;lt; 5 s (ADR-5)&lt;br style=&quot;font-size: 15px;&quot;&gt;bulk index rate&lt;br style=&quot;font-size: 15px;&quot;&gt;OpenSearch write pressure" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#3F8624;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="415" y="805" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="w3" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Webhook / Notification Workers&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;delivery P95 &amp;lt; 5 s&lt;br style=&quot;font-size: 15px;&quot;&gt;10,684 del/s · SQS depth&lt;br style=&quot;font-size: 15px;&quot;&gt;per-destination concurrency · DLQ" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#3F8624;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="705" y="805" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="w4" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Audit Ingestion / Fraud Feedback&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;ingestion rate · buffer depth&lt;br style=&quot;font-size: 15px;&quot;&gt;164,393 ev/s&lt;br style=&quot;font-size: 15px;&quot;&gt;feedback consumer lag" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#3F8624;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="995" y="810" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="w5" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Settlement Consumer / Batch&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;batch backlog&lt;br style=&quot;font-size: 15px;&quot;&gt;9,600 lines/s&lt;br style=&quot;font-size: 15px;&quot;&gt;Spot interruptions" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#3F8624;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1285" y="810" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="xrayt" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;AWS X-Ray + ADOT — end-to-end traces correlate the Four Golden Signals across S-xx and A-xx (trace_id)&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;fontSize=9;fontStyle=2;align=left;verticalAlign=middle;fontColor=#5A6C86;" parent="1" vertex="1">
+          <mxGeometry x="720" y="958" width="810" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="cde" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;CDE AWS Account — VPC 10.1.0.0/20 (PCI-DSS v4.0.1 isolated scope)&lt;/font&gt;" style="points=[];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;container=0;pointerEvents=0;collapsible=0;recursiveResize=0;verticalAlign=top;align=left;spacingLeft=30;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_account;strokeColor=#DD344C;fillColor=#FFF5F5;fontColor=#DD344C;dashed=0;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1590" y="375" width="540" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Tokenization Service (DS-01)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: P95 &amp;lt; 25 ms (S-01)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 6,410 req/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: 5xx &amp;lt; 0.1%&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU 60%" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="455" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Network Gateway&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;L: internal P95 &amp;lt; 20 ms (S-05)&lt;br style=&quot;font-size: 15px;&quot;&gt;T: 3,565 req/s&lt;br style=&quot;font-size: 15px;&quot;&gt;E: network declines vs timeouts&lt;br style=&quot;font-size: 15px;&quot;&gt;S: CPU · ISO 8583 session count" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF2E5;strokeColor=#ED7100;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="580" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="oam" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;CloudWatch OAM — Read-Only Metrics Sink&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;Cross-account observability link to the executive view.&lt;br style=&quot;font-size: 15px;&quot;&gt;Metrics only; no cardholder data (PAN) leaves the CDE (NFR-11).&lt;br style=&quot;font-size: 15px;&quot;&gt;CDE Logs/X-Ray stay in the CDE account." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FDF2F4;strokeColor=#DD344C;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;dashed=1;dashPattern=8 4;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="710" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="oamicon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;fillColor=#E7157B;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="2050" y="830" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="cnote" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Tokenization and Network Gateway run on ECS Fargate inside the CDE; their dashboards live in the CDE account and expose only Four Golden Signals through OAM.&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;fontSize=8;fontStyle=2;align=left;verticalAlign=top;fontColor=#DD344C;" parent="1" vertex="1">
+          <mxGeometry x="1620" y="880" width="480" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="L3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Layer 3 — Data Stores &amp;amp; Async Messaging Dashboard&lt;/font&gt;" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;container=0;pointerEvents=0;verticalAlign=top;rounded=1;arcSize=2;fillColor=#F2F3F5;strokeColor=#888888;fontColor=#232F3E;align=left;spacingLeft=10;dashed=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="1090" width="2060" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Amazon Aurora PostgreSQL&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;DS-02 · DS-04&lt;br style=&quot;font-size: 15px;&quot;&gt;writer/replica lag · CPU&lt;br style=&quot;font-size: 15px;&quot;&gt;connections (RDS Proxy) · commit latency&lt;br style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;[NFR-07 RPO=0]&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1170" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="di1" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.aurora;fillColor=#2E73B8;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="420" y="1176" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Amazon DynamoDB&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;DS-03 · DS-09&lt;br style=&quot;font-size: 15px;&quot;&gt;throttled requests (critical)&lt;br style=&quot;font-size: 15px;&quot;&gt;consumed vs provisioned WRU/RRU&lt;br style=&quot;font-size: 15px;&quot;&gt;TTL deletes" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="495" y="1170" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="di2" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;fillColor=#2E73B8;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="805" y="1176" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Amazon ElastiCache (Valkey)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;DS-05 · rate-limit cache&lt;br style=&quot;font-size: 15px;&quot;&gt;cache hit rate · evictions&lt;br style=&quot;font-size: 15px;&quot;&gt;memory % · CPU per primary&lt;br style=&quot;font-size: 15px;&quot;&gt;protects 100 ms fraud (NFR-05)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="880" y="1170" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="di3" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticache;fillColor=#2E73B8;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1190" y="1176" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Amazon MSK Express (DS-11)&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;Event Log&lt;br style=&quot;font-size: 15px;&quot;&gt;under-replicated partitions (crit)&lt;br style=&quot;font-size: 15px;&quot;&gt;consumer group offset lag&lt;br style=&quot;font-size: 15px;&quot;&gt;broker CPU · ingress/egress MB/s" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1265" y="1170" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="di4" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.managed_streaming_for_kafka;fillColor=#2E73B8;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="1575" y="1176" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="d5" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;Amazon SQS + DLQs&lt;/b&gt;&lt;br style=&quot;font-size: 15px;&quot;&gt;webhook / notification queues&lt;br style=&quot;font-size: 15px;&quot;&gt;ApproximateAgeOfOldestMessage&lt;br style=&quot;font-size: 15px;&quot;&gt;queue depth · in-flight&lt;br style=&quot;font-size: 15px;&quot;&gt;DLQ messages (critical)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0073BB;fontSize=15;fontColor=#232F3E;verticalAlign=top;spacingTop=4;align=left;spacingLeft=6;" parent="1" vertex="1">
+          <mxGeometry x="1650" y="1170" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="snsnote" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Breaching alarms route to Amazon SNS: ops-critical (paging) and ops-warning (ticket).&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;fontSize=9;fontStyle=2;align=left;verticalAlign=middle;fontColor=#5A6C86;" parent="1" vertex="1">
+          <mxGeometry x="110" y="1350" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dd1" value="drill-down" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=14;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="k2" target="pvpc" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="330" />
+              <mxPoint x="825" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dd2" value="drill-down" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=14;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="k6" target="cde" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1850" y="330" />
+              <mxPoint x="1725" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dd3" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;drill-down to data layer&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#232F3E;strokeWidth=1.5;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pvpc" target="L3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="458" y="1070" />
+              <mxPoint x="1100" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oamedge" value="CloudWatch OAM&lt;br style=&quot;font-size: 11px;&quot;&gt;read-only sink (metrics only)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#DD344C;strokeWidth=1.8;dashed=1;dashPattern=8 4;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="oam" target="k6" edge="1">
+          <mxGeometry x="0.0244" y="60" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2150" y="737" />
+              <mxPoint x="2150" y="330" />
+              <mxPoint x="1925" y="330" />
+            </Array>
+            <mxPoint x="1910" y="710" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corr1" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;X-Ray trace correlation&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#5A6C86;strokeWidth=1.2;dashed=1;dashPattern=6 3;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s3" target="w1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="515" />
+              <mxPoint x="690" y="760" />
+              <mxPoint x="50" y="760" />
+              <mxPoint x="50" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corr2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#5A6C86;strokeWidth=1.2;dashed=1;dashPattern=6 3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w3" target="d5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="950" />
+              <mxPoint x="1830" y="950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="corr3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;fontSize=9;fontColor=#232F3E;labelBackgroundColor=#FFFFFF;strokeColor=#5A6C86;strokeWidth=1.2;dashed=1;dashPattern=6 3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="w1" target="d1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="1080" />
+              <mxPoint x="50" y="1080" />
+              <mxPoint x="50" y="1212" />
+              <mxPoint x="110" y="1212" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cicon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="2074" y="450" width="26" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1I68x-DUsiew-odJRCvO-1" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=8;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;fillColor=#ED7100;strokeColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="2074" y="575" width="26" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Dx_XeEnDRhxmOrFT-CqS-4" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.xray;" vertex="1" parent="1">
+          <mxGeometry x="670" y="955" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Dx_XeEnDRhxmOrFT-CqS-5" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="1960" y="1176" width="34" height="34" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
